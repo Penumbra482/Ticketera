@@ -1,0 +1,17 @@
+{
+  "name": "tres-tickets",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Ticketera con precio final visible, cola virtual justa, mapa de asientos y reventa al valor original",
+  "engines": {
+    "node": ">=22.5"
+  },
+  "scripts": {
+    "start": "npm start --prefix server",
+    "dev": "npm run dev --prefix server",
+    "seed": "npm run seed --prefix server",
+    "reset": "npm run reset --prefix server",
+    "test": "npm test --prefix server"
+  }
+}

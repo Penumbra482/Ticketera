@@ -1,0 +1,86 @@
+<!doctype html>
+<html lang="es-AR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Tres Tickets — entradas sin vueltas</title>
+    <meta
+      name="description"
+      content="Comprá entradas para teatro, recitales y eventos independientes. Precio final desde el principio, cola justa y devolución sin vueltas."
+    />
+    <meta name="theme-color" content="#141416" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' rx='8' fill='%23c0392b'/%3E%3Ctext x='16' y='23' font-family='system-ui,sans-serif' font-size='20' font-weight='700' fill='%23fff' text-anchor='middle'%3E3%3C/text%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="/app/styles.css" />
+
+    <!--
+      Estilos mínimos del cartel de ayuda de abajo. Van acá, en la página, y no
+      en styles.css a propósito: si alguien abre este archivo con doble clic, la
+      hoja de estilos tampoco carga, y el cartel tiene que verse igual.
+    -->
+    <style>
+      .boot-help {
+        max-width: 40rem;
+        margin: 12vh auto;
+        padding: 0 1.5rem;
+        font: 16px/1.55 ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+        color: #1b1a18;
+      }
+      .boot-help h1 { font-size: 1.4rem; margin: 0 0 0.6rem; letter-spacing: -0.02em; }
+      .boot-help p { margin: 0 0 0.9rem; }
+      .boot-help pre {
+        background: #f3efe9;
+        border: 1px solid #e3ddd4;
+        border-radius: 10px;
+        padding: 14px 16px;
+        overflow-x: auto;
+        font: 14px/1.6 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      }
+      .boot-help .why { color: #5f5a53; font-size: 0.9rem; }
+      @media (prefers-color-scheme: dark) {
+        body { background: #121211; }
+        .boot-help { color: #f0ece6; }
+        .boot-help pre { background: #242322; border-color: #302e2c; }
+        .boot-help .why { color: #b5aea5; }
+      }
+    </style>
+  </head>
+  <body>
+    <!--
+      Este contenido es el estado de "todavía no arrancó". La aplicación lo
+      reemplaza apenas se dibuja la primera pantalla, así que solo lo ve alguien
+      para quien la app NO arrancó. Antes acá había un div vacío: si algo fallaba,
+      la página quedaba en blanco y no había forma de saber por qué.
+    -->
+    <div id="app" aria-busy="true">
+      <div class="boot-help">
+        <h1>Falta levantar el servidor</h1>
+        <p>
+          Tres Tickets no es una página suelta: necesita su servidor, que es el que
+          guarda los eventos, las butacas y las entradas. Abrí una terminal en la
+          carpeta del proyecto y ejecutá:
+        </p>
+        <pre>npm start</pre>
+        <p>
+          Después entrá a <strong>http://localhost:4000</strong> desde el navegador.
+          No hace falta <code>npm install</code>: el proyecto no tiene dependencias.
+          Sí hace falta Node 22.5 o más nuevo (<code>node -v</code> para verificarlo).
+        </p>
+        <p class="why">
+          Si estás viendo este cartel es porque abriste <code>web/index.html</code>
+          directamente desde el explorador de archivos. Así el navegador no puede
+          cargar los módulos de la aplicación (los bloquea por seguridad en
+          <code>file://</code>) ni hablar con la API.
+        </p>
+      </div>
+    </div>
+
+    <script type="module" src="/app/main.js"></script>
+
+    <noscript>
+      <div class="boot-help">
+        <h1>Hace falta JavaScript</h1>
+        <p>El mapa de asientos y el código QR de la entrada se dibujan en el navegador.</p>
+      </div>
+    </noscript>
+  </body>
+</html>
